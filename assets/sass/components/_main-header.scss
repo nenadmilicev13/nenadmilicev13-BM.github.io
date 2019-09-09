@@ -1,0 +1,124 @@
+.main-header {
+    position: relative;
+    z-index: 1;
+    background-color: $white;
+    padding: 25px 0;
+}
+
+.main-header--line {
+    border-bottom: 1px solid $spring-wood;
+}
+
+.main-header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq($tablet-l) {
+        display: block;
+    }
+}
+
+.main-header__logo {
+    img {
+        height: 50px;
+    }
+
+    @include mq($tablet-l) {
+        img {
+            margin-bottom: 10px;
+        }
+    }
+
+    @include mq($phone) {
+        img {
+            height: 35px;
+        }
+    }
+}
+
+.main-nav {
+    @include mq($tablet-l) {
+       text-align: center;
+       display: none;
+       position: absolute;
+       background-color: $white;
+       right: 0;
+       top: 100%;
+       height: 100vh;
+       min-width: 150px;
+    }
+}
+
+// .main-header__logo {
+//     font-size: 40px;
+//     font-family: $font-secondary;
+//     font-weight: 500;
+
+//     @include mq($tablet-l) {
+//         font-size: 25px;
+//     }
+// }
+
+.main-nav__list {
+    display: inline-block;
+    padding: 15px 30px;
+    transition: $dur $ease;
+
+    &:hover {
+        .drop-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+    }
+
+    @include mq($tablet-l) {
+        display: block;
+        padding: 10px 30px;
+     }
+}
+
+.main-nav__link {
+    font-size: 16px;
+    font-family: $font-main;
+    font-weight: 500;
+    position: relative;
+    padding: 48px 0;
+
+    @include hover {
+        &:hover {
+            color: $green;
+        }
+    }
+
+    @include mq($tablet-l) {
+        padding: 5px 0;
+    }
+}
+
+.main-header__media {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include mq($tablet-l) {
+        justify-content: initial;
+        align-items: initial;
+    }
+}
+
+.main-header__media-icon {
+    font-size: 15px;
+    display: block;
+    margin-right: 25px;
+    transition: $dur $ease;
+
+    &:hover {
+        color: $green;
+    }
+
+    @include mq($phone) {
+        font-size: 11px;
+    }
+}

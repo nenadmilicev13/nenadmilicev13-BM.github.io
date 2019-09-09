@@ -1,0 +1,30 @@
+.section-head__title {
+    font-size: 53px;
+    line-height: 48px;
+    font-weight: 500;
+    font-family: $font-main;
+    text-align: center;
+    position: relative;
+    padding: 15px 0;
+    margin-bottom: 60px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 1px;
+        background-color: $black;
+    }
+
+    @include mq($tablet-l) {
+        font-size: 40px;
+    }
+
+    @include mq($phone) {
+        font-size: 30px;
+        margin-bottom: 40px;
+    }
+}

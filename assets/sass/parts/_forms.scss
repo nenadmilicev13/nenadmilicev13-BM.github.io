@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+## Forms
+--------------------------------------------------------------*/
+input[type='text'],
+input[type='email'] {
+    width: 100%;
+    outline: none;
+    border: 1px solid $link-water;
+    padding: 10px;
+    font-family: $font-main;
+
+    &:hover {
+        border-color: $green;
+    }
+}
+
+textarea {
+    width: 100%;
+    height: 190px;
+    padding: 11px 13px;
+    margin-bottom: 20px;
+    border-color: $link-water;
+
+    &:hover {
+        border-color: $green;
+    }
+}
+
+label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 5px;
+    font-weight: 500;
+    font-family: $font-main;
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 14px;
+    color: $link-water;
+
+    @include mq($tablet-l) {
+        font-size: 12px;
+    }
+}

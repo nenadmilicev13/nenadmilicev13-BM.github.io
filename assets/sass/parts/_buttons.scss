@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+## Buttons
+--------------------------------------------------------------*/
+.btn {
+    display: inline-block;
+    padding: 15px 36px;
+    transition: $dur $ease;
+    font-size: 13px;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    @include media-breakpoint-down(md) {
+        padding: 7px 15px;
+        font-size: 11px;
+	}
+}
+
+.btn-ghost {
+    padding: 8px 24px;
+    font-size: 11px;
+    letter-spacing: 1.1px;
+    transition: $dur $ease;
+    color: $white;
+    border: 3px solid $white;
+    font-weight: 500;
+
+    &:hover {
+        background-color: $white;
+        color: $black;
+    }
+}
+
+.btn-green {
+    padding: 12px 24px;
+    background-color: $green;
+    color: $white;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 600;
+    transition: $dur $ease;
+
+    @include hover {
+        &:hover {
+            background-color: $green-dark;
+        }
+    }
+}
+
+.btn-green-sm {
+    padding: 5px 24px;
+}
