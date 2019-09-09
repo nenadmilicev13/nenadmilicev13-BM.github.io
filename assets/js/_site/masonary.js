@@ -6,10 +6,13 @@ const Masonary = {
 		# Initialize
 	-------------------------------------------------------------------------------*/
 	init: function () {
-		$('.gallery__image-box-container').masonry({
-            // options
-			itemSelector: '.gallery__item',
-        });
+		$(window).on('load', function() {
+			$('.gallery__image-box-container').masonry({
+				// options
+				itemSelector: '.gallery__item',
+			});
+		});
+		
 	}
 };
 
